@@ -1,7 +1,7 @@
 {
   "id": "moodstudios-collab",
   "name": "Mood Collab",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "minAppVersion": "1.5.0",
   "description": "Mood Collab — real-time collaborative markdown editing on a self-hosted CRDT server.",
   "author": "Mood Studios",
