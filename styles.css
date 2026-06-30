@@ -1,0 +1,781 @@
+/* ============================================================
+   Mood Collab — Plugin Styles
+   Uses Obsidian CSS variables for theme compatibility.
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Presence avatars
+   ---------------------------------------------------------- */
+.mood-collab-presence {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  display: flex;
+  gap: 4px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.mood-collab-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid var(--background-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+  cursor: default;
+  user-select: none;
+}
+
+.mood-collab-avatar.is-self {
+  opacity: 0.7;
+}
+
+/* ----------------------------------------------------------
+   Login modal
+   ---------------------------------------------------------- */
+.mood-login-form {
+  padding: 4px 0 8px;
+}
+
+.mood-login-subtitle {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.mood-login-field {
+  margin: 10px 0;
+}
+
+.mood-login-field label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--text-normal);
+}
+
+.mood-login-field input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mood-login-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0;
+  font-size: 0.875em;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.mood-login-remember input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.mood-login-actions {
+  margin-top: 18px;
+}
+
+.mood-login-btn {
+  width: 100%;
+  padding: 6px 0;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: var(--radius-s, 4px);
+}
+
+.mood-login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mood-login-error {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-s, 4px);
+  background-color: var(--background-modifier-error);
+  color: var(--text-error);
+  font-size: 0.875em;
+}
+
+/* ----------------------------------------------------------
+   Status bar dot
+   ---------------------------------------------------------- */
+.mood-status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.mood-status-dot.is-connected { background: #3fb950; }
+.mood-status-dot.is-connecting { background: #d29922; }
+.mood-status-dot.is-offline { background: #8b949e; }
+
+/* ----------------------------------------------------------
+   Unread-comments status-bar badge
+   ---------------------------------------------------------- */
+.mood-unread-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: var(--text-accent, var(--interactive-accent));
+  font-weight: 600;
+}
+
+.mood-unread-badge:hover {
+  color: var(--interactive-accent-hover, var(--interactive-accent));
+}
+
+.mood-unread-badge .mood-unread-badge-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Size the lucide icon to sit inline with the status-bar text. */
+.mood-unread-badge .mood-unread-badge-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.mood-unread-badge .mood-unread-badge-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--interactive-accent);
+  color: var(--text-on-accent, #fff);
+  font-size: 0.72em;
+  line-height: 1;
+}
+
+/* ----------------------------------------------------------
+   Comments ribbon icon — unread dot
+   ---------------------------------------------------------- */
+/* Anchor the dot to the ribbon action only when it carries unread activity, so
+   no other ribbon items are restyled. */
+.mood-ribbon-has-unread {
+  position: relative;
+}
+
+/* The dot is hidden by default and revealed only on the unread state. */
+.mood-ribbon-dot {
+  display: none;
+}
+
+.mood-ribbon-has-unread .mood-ribbon-dot {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--interactive-accent);
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   Who's-online presence panel
+   ---------------------------------------------------------- */
+.mood-presence-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.mood-presence-meta {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* ----------------------------------------------------------
+   First-run welcome modal
+   ---------------------------------------------------------- */
+.mood-welcome-body {
+  padding: 4px 0 8px;
+}
+
+.mood-welcome-intro {
+  margin: 0 0 12px;
+  color: var(--text-normal);
+}
+
+.mood-welcome-features {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: var(--text-muted);
+}
+
+.mood-welcome-features li {
+  margin: 6px 0;
+}
+
+.mood-welcome-note {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.mood-welcome-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+/* ----------------------------------------------------------
+   Confirmation modal
+   ---------------------------------------------------------- */
+.mood-confirm-body {
+  margin: 0 0 16px;
+  color: var(--text-normal);
+}
+
+.mood-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ----------------------------------------------------------
+   Settings tab
+   ---------------------------------------------------------- */
+.mood-settings-note {
+  margin: 4px 0 12px;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+/* ----------------------------------------------------------
+   Version history modal
+   ---------------------------------------------------------- */
+.mood-history-empty {
+  margin: 4px 0;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.mood-history-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.mood-history-row:last-child {
+  border-bottom: none;
+}
+
+.mood-history-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.mood-history-meta {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.mood-history-snippet {
+  margin-top: 2px;
+  font-size: 0.8em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mood-history-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.mood-history-preview {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-monospace);
+  font-size: 0.85em;
+  resize: vertical;
+}
+
+/* ----------------------------------------------------------
+   Wave D2 — comment composer modal
+   ---------------------------------------------------------- */
+.mood-comment-input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+
+.mood-comment-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* ----------------------------------------------------------
+   Wave D2 — comments side panel
+   ---------------------------------------------------------- */
+.mood-comments-empty,
+.mood-activity-empty {
+  padding: 16px 12px;
+  color: var(--text-muted);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.mood-comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 2px;
+}
+
+.mood-comment-row {
+  padding: 10px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m, 8px);
+  background: var(--background-primary);
+}
+
+.mood-comment-resolved {
+  opacity: 0.6;
+}
+
+.mood-comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mood-comment-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mood-comment-author {
+  font-weight: 600;
+  font-size: 0.875em;
+  color: var(--text-normal);
+}
+
+.mood-comment-time {
+  font-size: 0.75em;
+  color: var(--text-muted);
+}
+
+.mood-comment-quote {
+  margin: 8px 0;
+  padding: 4px 0 4px 10px;
+  border-left: 3px solid var(--background-modifier-border);
+  color: var(--text-muted);
+  font-size: 0.85em;
+  font-style: italic;
+  white-space: pre-wrap;
+  cursor: pointer;
+}
+
+.mood-comment-body {
+  margin: 6px 0;
+  font-size: 0.9em;
+  color: var(--text-normal);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.mood-mention {
+  background: var(--background-modifier-hover);
+  color: var(--text-accent);
+  border-radius: var(--radius-s, 4px);
+  padding: 0 3px;
+  font-weight: 600;
+}
+
+.mood-comment-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.mood-comment-action {
+  font-size: 0.8em;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.mood-comment-delete {
+  color: var(--text-error);
+}
+
+.mood-comment-replies {
+  margin: 8px 0 4px;
+  padding-left: 10px;
+  border-left: 2px solid var(--background-modifier-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mood-comment-reply-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.mood-comment-reply-body {
+  font-size: 0.85em;
+  color: var(--text-normal);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.mood-comment-reply {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.mood-comment-reply-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.85em;
+}
+
+.mood-comment-reply-send {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+/* ----------------------------------------------------------
+   Commented-text highlight (Google-Docs style)
+   In-editor mark over text that has an unresolved comment. rgba values keep it
+   legible on both light and dark themes; clicking opens the comments panel.
+   ---------------------------------------------------------- */
+.mood-commented-text {
+  background: rgba(255, 200, 0, 0.18);
+  border-bottom: 1px solid rgba(255, 180, 0, 0.6);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.mood-commented-text:hover {
+  background: rgba(255, 200, 0, 0.32);
+  border-bottom-color: rgba(255, 170, 0, 0.85);
+}
+
+/* Brief pulse on a comment row when its highlight is clicked in the editor. */
+.mood-comment-flash {
+  animation: mood-comment-flash-kf 1.2s ease-out;
+}
+
+@keyframes mood-comment-flash-kf {
+  0% { box-shadow: 0 0 0 2px var(--interactive-accent); }
+  100% { box-shadow: 0 0 0 2px transparent; }
+}
+
+/* ----------------------------------------------------------
+   Wave D2 — activity feed side panel
+   ---------------------------------------------------------- */
+.mood-activity-list {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 2px;
+}
+
+.mood-activity-row {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.mood-activity-row:last-child {
+  border-bottom: none;
+}
+
+.mood-activity-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.mood-activity-actor {
+  font-weight: 600;
+  font-size: 0.85em;
+  color: var(--text-normal);
+}
+
+.mood-activity-time {
+  font-size: 0.75em;
+  color: var(--text-muted);
+}
+
+.mood-activity-summary {
+  margin: 4px 0;
+  font-size: 0.875em;
+  color: var(--text-normal);
+  line-height: 1.4;
+}
+
+.mood-activity-note {
+  font-size: 0.8em;
+  color: var(--text-accent);
+  cursor: pointer;
+}
+
+.mood-activity-note:hover {
+  text-decoration: underline;
+}
+
+/* "N new" header shown above the feed for activity unread this open. */
+.mood-activity-new-header {
+  margin: 6px 8px 2px;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-accent, var(--interactive-accent));
+}
+
+/* A row that is new since the feed was last opened: subtle accent emphasis. */
+.mood-activity-row.mood-activity-new {
+  border-left: 2px solid var(--interactive-accent);
+  padding-left: 6px;
+  background: var(--background-modifier-hover);
+}
+
+.mood-activity-row.mood-activity-new .mood-activity-actor {
+  font-weight: 700;
+}
+
+/* Leading dot marking a new row. */
+.mood-activity-new-dot {
+  color: var(--interactive-accent);
+  font-weight: 700;
+  margin-right: 2px;
+  line-height: 1;
+}
+
+/* ----------------------------------------------------------
+   @mention autocomplete (comment composer + reply inputs)
+   ---------------------------------------------------------- */
+.mood-mention-suggest {
+  position: fixed;
+  z-index: var(--layer-menu, 1000);
+  min-width: 140px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 4px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+}
+
+.mood-mention-suggest-item {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--text-normal);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mood-mention-suggest-item.is-selected,
+.mood-mention-suggest-item:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+/* ----------------------------------------------------------
+   Comments tutorial modal
+   ---------------------------------------------------------- */
+.mood-help-body {
+  margin-bottom: 12px;
+}
+
+.mood-help-intro {
+  margin: 0 0 10px;
+  color: var(--text-normal);
+  line-height: 1.5;
+}
+
+.mood-help-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.mood-help-list li {
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.mood-help-list li strong {
+  color: var(--text-normal);
+}
+
+.mood-help-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+/* ----------------------------------------------------------
+   Comments panel — This note / All notes tabs + global list
+   ---------------------------------------------------------- */
+.mood-comments-tabs {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  margin-bottom: 8px;
+}
+
+.mood-comments-tab {
+  flex: 1;
+  padding: 6px 8px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-size: 0.85em;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.mood-comments-tab:hover {
+  color: var(--text-normal);
+  background: var(--background-modifier-hover);
+}
+
+.mood-comments-tab.is-active {
+  color: var(--text-accent);
+  border-bottom-color: var(--interactive-accent);
+}
+
+.mood-comments-show-resolved {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0 8px;
+  font-size: 0.8em;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.mood-comments-show-resolved input { margin: 0; cursor: pointer; }
+
+.mood-comments-note-group {
+  margin-bottom: 14px;
+}
+
+.mood-comments-note-header {
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  padding: 4px 2px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  cursor: pointer;
+}
+
+.mood-comments-note-header:hover { color: var(--text-accent); }
+
+/* Global rows are navigation-only (no action buttons); show they're clickable. */
+.mood-comment-global { cursor: pointer; }
+.mood-comment-global:hover { background: var(--background-modifier-hover); border-radius: 6px; }
+
+/* ----------------------------------------------------------
+   Setup-progress modal (first-run / connection)
+   ---------------------------------------------------------- */
+.mood-setup-head {
+  margin: 4px 0 2px;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.mood-setup-sub {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.mood-setup-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--background-modifier-border);
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.mood-setup-bar-fill {
+  height: 100%;
+  background: var(--interactive-accent);
+  border-radius: 4px;
+  transition: width 0.25s ease;
+}
+
+.mood-setup-count {
+  margin: 4px 0 0;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.mood-setup-note {
+  margin: 12px 0 0;
+  font-size: 0.8em;
+  color: var(--text-faint);
+}
+
+.mood-setup-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mood-setup-btn {
+  padding: 6px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: var(--radius-s, 4px);
+}
