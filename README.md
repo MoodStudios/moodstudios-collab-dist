@@ -23,3 +23,9 @@ No GitHub account or token is required — this repo is public.
 This repo is published automatically from the private source repo on each
 version tag. BRAT picks up new versions on its own; you don't need to do
 anything after the first install.
+
+## License
+
+**Proprietary — © 2026 Mood Studios. All rights reserved.** This build is
+published only so the Mood Studios / OVR team can install and update the plugin;
+it is **not** open source. See [LICENSE](LICENSE) for the full terms.

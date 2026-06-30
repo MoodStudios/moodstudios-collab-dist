@@ -1,0 +1,32 @@
+Mood Collab — Proprietary License
+Copyright © 2026 Mood Studios. All rights reserved.
+
+This repository contains the compiled build of the Mood Collab Obsidian plugin
+(the "Software"), which is the proprietary and confidential property of Mood
+Studios. The Software is published here for the SOLE purpose of letting
+authorized members of the Mood Studios / OVR team install and update the plugin.
+
+Publication in a public repository does NOT place the Software in the public
+domain and does NOT grant any open-source or other license. Except where a right
+cannot lawfully be withheld, no permission is granted to any person or entity to,
+in whole or in part:
+
+  - use, run, or install the Software, other than as an authorized team member
+    operating against Mood Studios' own servers;
+  - copy, reproduce, mirror, or republish the Software;
+  - modify, adapt, translate, or create derivative works of the Software;
+  - distribute, sublicense, sell, rent, lease, lend, or otherwise transfer the
+    Software; or
+  - reverse engineer, decompile, or disassemble the Software, except to the
+    extent this restriction is prohibited by applicable law.
+
+All rights not expressly granted are reserved by Mood Studios.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL MOOD STUDIOS BE
+LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For licensing inquiries, contact Mood Studios.
