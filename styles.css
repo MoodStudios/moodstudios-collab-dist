@@ -779,3 +779,10 @@
   border: none;
   border-radius: var(--radius-s, 4px);
 }
+
+.mood-admin-view { padding: 0 12px; }
+.mood-admin-table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; }
+.mood-admin-table th, .mood-admin-table td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--background-modifier-border); }
+.mood-admin-table button { margin-right: 6px; }
+.mood-admin-note { color: var(--text-muted); font-size: 0.85em; margin-bottom: 8px; }
+.mood-admin-password { display: block; padding: 8px; margin: 8px 0; font-size: 1.1em; user-select: all; background: var(--background-secondary); }
