@@ -66,22 +66,6 @@
   box-sizing: border-box;
 }
 
-.mood-login-remember {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 14px 0;
-  font-size: 0.875em;
-  color: var(--text-muted);
-  cursor: pointer;
-  user-select: none;
-}
-
-.mood-login-remember input[type="checkbox"] {
-  margin: 0;
-  cursor: pointer;
-}
-
 .mood-login-actions {
   margin-top: 18px;
 }
@@ -619,42 +603,6 @@
 }
 
 /* ----------------------------------------------------------
-   Comments tutorial modal
-   ---------------------------------------------------------- */
-.mood-help-body {
-  margin-bottom: 12px;
-}
-
-.mood-help-intro {
-  margin: 0 0 10px;
-  color: var(--text-normal);
-  line-height: 1.5;
-}
-
-.mood-help-list {
-  margin: 0;
-  padding-left: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.mood-help-list li {
-  color: var(--text-muted);
-  line-height: 1.45;
-}
-
-.mood-help-list li strong {
-  color: var(--text-normal);
-}
-
-.mood-help-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 4px;
-}
-
-/* ----------------------------------------------------------
    Comments panel — This note / All notes tabs + global list
    ---------------------------------------------------------- */
 .mood-comments-tabs {
@@ -721,68 +669,22 @@
 .mood-comment-global { cursor: pointer; }
 .mood-comment-global:hover { background: var(--background-modifier-hover); border-radius: 6px; }
 
-/* ----------------------------------------------------------
-   Setup-progress modal (first-run / connection)
-   ---------------------------------------------------------- */
-.mood-setup-head {
-  margin: 4px 0 2px;
-  font-size: 1.05em;
-  font-weight: 600;
-  color: var(--text-normal);
-}
-
-.mood-setup-sub {
-  margin: 0 0 12px;
-  color: var(--text-muted);
-  font-size: 0.9em;
-}
-
-.mood-setup-bar {
-  height: 8px;
-  border-radius: 4px;
-  background: var(--background-modifier-border);
-  overflow: hidden;
-  margin: 6px 0;
-}
-
-.mood-setup-bar-fill {
-  height: 100%;
-  background: var(--interactive-accent);
-  border-radius: 4px;
-  transition: width 0.25s ease;
-}
-
-.mood-setup-count {
-  margin: 4px 0 0;
-  font-size: 0.85em;
-  color: var(--text-muted);
-}
-
-.mood-setup-note {
-  margin: 12px 0 0;
-  font-size: 0.8em;
-  color: var(--text-faint);
-}
-
-.mood-setup-actions {
-  margin-top: 16px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.mood-setup-btn {
-  padding: 6px 16px;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: var(--interactive-accent);
-  color: var(--text-on-accent);
-  border: none;
-  border-radius: var(--radius-s, 4px);
-}
-
 .mood-admin-view { padding: 0 12px; }
 .mood-admin-table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; }
 .mood-admin-table th, .mood-admin-table td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--background-modifier-border); }
 .mood-admin-table button { margin-right: 6px; }
 .mood-admin-note { color: var(--text-muted); font-size: 0.85em; margin-bottom: 8px; }
 .mood-admin-password { display: block; padding: 8px; margin: 8px 0; font-size: 1.1em; user-select: all; background: var(--background-secondary); }
+.mood-status-dot.is-blocked {
+  background: var(--text-error);
+}
+
+.mood-login-server {
+  margin-bottom: 8px;
+}
+
+.mood-login-server summary {
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+}
