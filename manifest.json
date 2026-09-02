@@ -1,0 +1,10 @@
+{
+  "id": "moodstudios-collab",
+  "name": "Mood Collab",
+  "version": "1.1.1",
+  "minAppVersion": "1.5.0",
+  "description": "Collaborate on Markdown notes in real time with shared editing, comments, presence, and self-hosted sync.",
+  "author": "Mood Studios",
+  "authorUrl": "https://github.com/MoodStudios",
+  "isDesktopOnly": false
+}
